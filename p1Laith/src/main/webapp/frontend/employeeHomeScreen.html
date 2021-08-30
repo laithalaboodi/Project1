@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" />
+    <title>Employee Home Screen</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+      <div class="container">
+        <a class="navbar-brand" href="login.html">Laith Reimbursement</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="employeeHomeScreen.html">Employee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="financeManager.html">Manager</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="card">
+    <div class="card-header">Submit New Reimbursement</div>
+    <form id="reimbursementForm">
+      <div class="form-group">
+        <label for="amountInput">Amount</label>
+        <input
+          type="number"
+          class="form-control"
+          id="amountInput"
+          min="0.01" step="0.01" max="10000"
+          placeholder="Enter amount"
+          required
+        />
+        <!-- <small id="amountHelp" class="form-text text-muted"
+          >Please enter a numver in the form $XXX.XX</small
+        > -->
+      <label for="expenseTypeSelect">Type of Expense</label>
+      <select class="form-control" id="expenseTypeSelect" required>
+        <option value = "" disabled selected>Please select an option</option>
+        <option value = "LODGING" >Lodging</option>
+        <option value = "TRAVEL" >Travel</option>
+        <option value = "FOOD" >Food</option>
+        <option value = "OTHER" >Other</option>
+      </select>
+        <label for="descriptionInput">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="descriptionInput"
+          placeholder="Optional"
+        />
+        <button type="submit" class="btn btn-outline-dark" id="submitReimbursement">Submit</button>
+        <button type="button" class="btn btn-outline-dark" id="getTickets">Get Tickets</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card-deck" id="ticketList">
+      <!-- <div class="card-header">Previous Tickets</div> -->
+      <!-- <ul class="list-group list-group-flush" id="reimbursementList">
+      </ul> -->
+    </div>
+
+    <script src="employeeHomeScreen.js"></script>
+  </body>
+</html>

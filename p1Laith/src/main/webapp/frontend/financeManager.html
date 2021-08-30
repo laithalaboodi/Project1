@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./main.css" />
+    <title>Finance Manager</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+      <div class="container">
+        <a class="navbar-brand" href="login.html">Laith Reimbursement</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="employeeHomeScreen.html">Employee</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="financeManager.html">Manager</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <form id="filterForm">
+      <div class="card">
+        <div class="card-header">Select Filter</div>
+        <div class="form-group">
+          <select class="form-control" id="filterSelect" required>
+            <option value="all">No Filter</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="denied">Denied</option>
+          </select>
+          <button type="submit" class="btn btn-outline-dark" id="filterButton">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="card-deck" id="reimbursementList">
+      <!-- <div class="card-header">All Tickets</div> -->
+      <!-- <ul class="list-group list-group-flush" id="reimbursementList"></ul> -->
+    </div>
+    <script src="financeManger.js"></script>
+  </body>
+</html>
